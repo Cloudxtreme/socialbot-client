@@ -1,0 +1,14 @@
+@import 'darkly.css';
+
+.navbar-nav li a:hover {
+  cursor: pointer;
+}
+
+.container.root {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.jumbotron.dashboard {
+  margin-top: 5.5em;
+}
