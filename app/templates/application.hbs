@@ -18,12 +18,18 @@
 					{{#link-to 'dashboard' tagName='li'}}
 						<a>dashboard</a>
 					{{/link-to}}
+
+					{{#link-to 'bots' tagName='li'}}
+						<a>bots</a>
+					{{/link-to}}
 				</ul>
 			</div> <!--/.nav-collapse -->
 		</div> <!--/.container -->
 	</nav>
 
 	<div class="container root">
-		{{outlet}}
+		<div class="container-wrapper">
+			{{outlet}}
+		</div>
 	</div>
 </section>

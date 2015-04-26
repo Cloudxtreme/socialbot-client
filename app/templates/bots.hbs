@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-3">
+		<ul class="list-group">
+			{{#unless hasBots}}
+				<li class='list-group-item'>
+					<h4>You have no bots.</h4>
+
+					<p>Bots are cool and you should create one. How? well just fill the form.</p>
+
+					<p>A name is required and the default type is a stream.</p>
+				</li>
+			{{/unless}}
+
+			{{#each bot in model}}
+				{{#link-to 'bots.bot' bot tagName='li' class='list-group-item'}}
+					{{bot.name}} <span class="badge">{{bot.type}}</span>
+				{{/link-to}}
+			{{/each}}
+		</ul>
+
+		{{#if hasBots}}
+			<button type="button" class="btn btn-default btn-lg btn-block">
+				create bot
+			</button>
+		{{/if}}
+	</div>
+
+	<div class="col-md-9">
+		{{outlet}}
+	</div>
+</div>
