@@ -2,6 +2,12 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
 	hasBots: function () {
-		return this.get('model.length');
+		var length = this.get('model.length');
+
+		if (!length) {
+			this.transitionToRoute('bots.create');
+		}
+
+		return length;
 	}.property('model.length')
 });

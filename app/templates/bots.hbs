@@ -19,9 +19,9 @@
 		</ul>
 
 		{{#if hasBots}}
-			<button type="button" class="btn btn-default btn-lg btn-block">
+			{{#link-to 'bots.create' tagName='button' class='btn btn-default btn-lg btn-block'}}
 				create bot
-			</button>
+			{{/link-to}}
 		{{/if}}
 	</div>
 

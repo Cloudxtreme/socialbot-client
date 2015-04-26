@@ -8,12 +8,9 @@ var Router = Ember.Router.extend({
 Router.map(function () {
 	this.route('dashboard', { path: '/' });
 	this.resource('bots', function () {
-
-		// TODO: new
-
+		this.route('create', { path: '/create' });
 		this.route('bot', { path: '/:id' }, function () {
-
-			// TODO: edit
+			this.route('edit');
 		});
 	});
 });

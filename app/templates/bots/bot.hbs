@@ -1,7 +1,21 @@
 <div class="panel panel-default">
 	<div class="panel-body">
-		<span>{{model.name}}</span>
+		<div class="row">
+			<div class="col-md-8">
+				<span>{{model.name}}</span>
 
-		{{outlet}}
+				{{outlet}}
+			</div>
+
+			<div class="col-md-3 col-md-offset-1">
+				<button {{action 'edit'}} class="btn btn-default">
+					edit
+				</button>
+
+				<button {{action 'delete'}} class="btn btn-danger">
+					delete
+				</button>
+			</div>
+		</div>
 	</div>
 </div>
