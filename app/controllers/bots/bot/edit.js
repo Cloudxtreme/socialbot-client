@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
 
 			bot.set('name', bot.get('name'));
 			bot.save().then(function () {
+				this.notify.success('Bot updated!');
 				this.transitionToRoute('bots.bot');
 			}.bind(this));
 

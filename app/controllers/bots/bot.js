@@ -12,6 +12,8 @@ export default Ember.Controller.extend({
 			bot.deleteRecord();
 			bot.save().then(function () {
 				this.store.find('bot').then(function (bots) {
+					this.notify.success('Bot deleted!');
+
 					if (bots.get('length')) {
 						this.transitionToRoute('bots.index');
 					} else {
@@ -20,7 +22,7 @@ export default Ember.Controller.extend({
 				}.bind(this));
 
 				// TODO: error handling
-				
+
 			}.bind(this));
 
 			// TODO: error handling

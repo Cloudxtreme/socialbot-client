@@ -9,6 +9,8 @@ export default Ember.Controller.extend({
 			});
 
 			bot.save().then(function (bot) {
+				this.notify.success('Bot created!');
+
 				this.transitionToRoute('bots.bot', bot);
 			}.bind(this));
 
