@@ -21,7 +21,7 @@ module.exports = function(environment) {
 		contentSecurityPolicy: {
 			'script-src': "'self' 'unsafe-eval' http://*:35729",
 			'font-src': "'self' http://fonts.gstatic.com",
-			'connect-src': "'self' http://localhost:8888",
+			'connect-src': "'self' http://localhost:8888 ws://localhost:8888",
 			'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
 		}
 	};
@@ -35,6 +35,7 @@ module.exports = function(environment) {
 		ENV.APP.LOG_TRANSITIONS = true;
 		ENV.APP.API_HOST = 'http://localhost:8888';
 		ENV.APP.API_VERSION = 'v1';
+		ENV.APP.SOCKET_IO_SERVER = 'http://localhost:8888';
 	}
 
 	if (environment === 'test') {
