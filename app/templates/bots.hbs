@@ -19,13 +19,13 @@
 		</ul>
 
 		{{#if hasBots}}
-			{{#link-to 'bots.create' tagName='button' class='btn btn-default btn-lg btn-block'}}
-				create bot
+			{{#link-to 'bots.create' tagName='button' class='btn btn-info btn-lg btn-block'}}
+				{{fa-icon 'plus'}}
 			{{/link-to}}
 		{{/if}}
 	</div>
 
 	<div class="col-md-9">
-		{{outlet}}
+		{{liquid-outlet}}
 	</div>
 </div>

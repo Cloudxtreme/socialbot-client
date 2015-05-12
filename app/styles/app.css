@@ -12,3 +12,13 @@
 .container-wrapper {
 	margin-top: 5.5em;
 }
+
+.details-header {
+	margin: 0.2em;
+}
+
+.info {
+	text-align: center;
+	/*color: #f39c12;*/
+	color: #f1c40f;
+}

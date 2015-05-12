@@ -1,9 +1,25 @@
 <form>
 	<div class="form-group">
-		<label>Edit your bot.</label>
-		{{input value=model.name type='text' placeholder='Update your bot name' class='form-control'}}
+		<h3 class="details-header">
+			{{fa-icon 'edit'}} <small>Edit your bot</small>
+		</h3>
 	</div>
 
-	<button {{action 'update'}} class="btn btn-success">update</button>
-	<button {{action 'cancel'}} class="btn btn-warning">cancel</button>
+	<div class="form-group">
+		<label>name</label>
+		{{input autofocus='autofocus' value=model.name type='text' placeholder='Update your bot name' class='form-control'}}
+	</div>
+
+	<div class="form-group">
+		<label>description</label>
+		{{input value=model.description type='text' placeholder='Update your bot description' class='form-control'}}
+	</div>
+
+	<button {{action 'update'}} class="btn btn-success">
+		{{fa-icon 'check' fixedWidth=true}}
+	</button>
+
+	<button {{action 'cancel'}} class="btn btn-warning">
+		{{fa-icon 'remove' fixedWidth=true}}
+	</button>
 </form>

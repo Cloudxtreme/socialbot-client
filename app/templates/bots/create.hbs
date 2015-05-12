@@ -1,8 +1,15 @@
 <form>
 	<div class="form-group">
-		{{input value=name type='text' placeholder='Enter bot name' class='form-control'}}
-		<p class="help-block">A name describing your bot.</p>
+		<p class="help-block">How is your bot called?</p>
+		{{input autofocus='autofocus' value=name type='text' placeholder='Enter bot name' class='form-control'}}
 	</div>
 
-	<button {{action 'create'}} class="btn btn-success">create</button>
+	<div class="form-group">
+		<p class="help-block">What does your bot do?</p>
+		{{input value=description type='text' placeholder='Enter bot description' class='form-control'}}
+	</div>
+
+	<button {{action 'create'}} class="btn btn-success">
+		{{fa-icon 'check' fixedWidth=true}}
+	</button>
 </form>

@@ -1,20 +1,26 @@
 <div class="panel panel-default">
 	<div class="panel-body">
 		<div class="row">
-			<div class="col-md-8">
-				<span>{{model.name}}</span>
-
-				{{outlet}}
+			<div class="col-md-10">
+				<h2 class="details-header">
+					{{model.name}} <small>{{model.description}}</small>
+				</h2>
 			</div>
 
-			<div class="col-md-3 col-md-offset-1">
-				<button {{action 'edit'}} class="btn btn-default">
-					edit
+			<div class="col-md-2">
+				<button {{action 'edit'}} class="btn btn-info">
+					{{fa-icon 'edit' fixedWidth=true}}
 				</button>
 
 				<button {{action 'delete'}} class="btn btn-danger">
-					delete
+					{{fa-icon 'trash' fixedWidth=true}}
 				</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				{{liquid-outlet}}
 			</div>
 		</div>
 	</div>
